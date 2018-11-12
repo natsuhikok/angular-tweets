@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>Tweets</th>
+      <th>Likes</th>
+      <th>Replies</th>
+      <th>Retweets</th>
+      <th>Hashtags</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tweet of tweets$ | async">
+      <th>{{tweet.text}}</th>
+      <th>{{tweet.likes}}</th>
+      <th>{{tweet.replies}}</th>
+      <th>{{tweet.retweet}}</th>
+      <th>
+        <ul>
+          <li *ngFor="let tag of tweet.hashtags">
+            {{tag}}
+          </li>
+        </ul>
+      </th>
+      <th>{{tweet.date}}</th>
+    </tr>
+  </tbody>
+</table>
