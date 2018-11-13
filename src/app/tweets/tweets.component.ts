@@ -32,6 +32,7 @@ export class TweetsComponent implements OnInit {
     this.lastPage = Math.ceil(tweets.length / 10);
     if (tweets.length <= 10) {
       this.currentTweets = tweets;
+      this.currentPage = 0;
     } else {
       this.paging(1);
     }

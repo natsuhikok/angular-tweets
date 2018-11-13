@@ -1,6 +1,6 @@
 <nav>
   <ul class="pagination">
-    <li class="pagination--list" *ngIf="current !== 1">
+    <li class="pagination--list" *ngIf="current > 1">
       <button
         class="paginationButton"
         (click)="handleClick(current - 1)"
@@ -13,7 +13,7 @@
         (click)="handleClick(num + 1)"
       >{{num + 1}}</button>
     </li>
-    <li class="pagination--list" *ngIf="current !== last">
+    <li class="pagination--list" *ngIf="current < last">
         <button
           class="paginationButton"
           (click)="handleClick(current + 1)"
