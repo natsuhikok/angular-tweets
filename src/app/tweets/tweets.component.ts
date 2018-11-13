@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 
 import Tweet from '../tweet';
 import { TweetService } from '../tweet.service';
+import { TWEETS } from '../mock-tweets';
 
 @Component({
   selector: 'app-tweets',
@@ -13,7 +13,10 @@ import { TweetService } from '../tweet.service';
 })
 export class TweetsComponent implements OnInit {
   @Input() type: string;
-  tweets$: Observable<Tweet[]>;
+  tweets: Tweet[];
+  currentTweets: Tweet[];
+  currentPage: number;
+  lastPage: number;
   private searchTerms = new Subject<string>();
 
   constructor(private tweetService: TweetService) {}
@@ -21,12 +24,23 @@ export class TweetsComponent implements OnInit {
   search(term: string): void {
     this.searchTerms.next(term);
   }
-
+  paging(next: number): void {
+    this.currentPage = next;
+    this.currentTweets = this.tweets.slice((next - 1) * 10, (next - 1) * 10 + 10);
+  };
   ngOnInit(): void {
-    this.tweets$ = this.searchTerms.pipe(
+    this.searchTerms.pipe(
       debounceTime(300),
       distinctUntilChanged(),
       switchMap((term: string) => this.tweetService.searchTweets(term, this.type.toLowerCase())),
-    );
+    ).subscribe(tweets => {
+      this.tweets = tweets;
+      this.lastPage = Math.ceil(tweets.length / 10);
+      if (tweets.length <= 10) {
+        this.currentTweets = tweets;
+      } else {
+        this.paging(1);
+      }
+    });
   }
 }

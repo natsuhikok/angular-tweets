@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TweetService } from './tweet.service';
 import { TableComponent } from './table/table.component';
 import { TweetsComponent } from './tweets/tweets.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { TweetsComponent } from './tweets/tweets.component';
     UsersComponent,
     TableComponent,
     TweetsComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,

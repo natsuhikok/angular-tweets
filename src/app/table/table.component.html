@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let tweet of tweets$ | async">
+    <tr *ngFor="let tweet of tweets">
       <th>{{tweet.text}}</th>
       <th>{{tweet.likes}}</th>
       <th>{{tweet.replies}}</th>

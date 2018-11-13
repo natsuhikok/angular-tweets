@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let num of range(last)">
+    <button
+      [class.active]="num + 1 === current"
+      (click)="handleClick(num + 1)"
+    >{{num + 1}}</button>
+  </li>
+</ul>

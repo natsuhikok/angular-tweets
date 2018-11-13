@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import Tweet from '../tweet';
 
 @Component({
@@ -9,5 +8,5 @@ import Tweet from '../tweet';
 })
 
 export class TableComponent {
-  @Input() tweets$: Observable<Tweet[]>;
+  @Input() tweets: Tweet[];
 }
