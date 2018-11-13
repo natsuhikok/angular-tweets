@@ -1,0 +1,33 @@
+.tweetsTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.tweetsTableCell {
+  padding: 20px;
+  border-bottom: 1px solid #F0F0F0;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+}
+.tweetsTableCell_gray {
+  color: #999;
+}
+.tweetsTableCell_center {
+  text-align: center;
+}
+.tweetsTableCell--list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.tweetsTableCell--list > li {
+  display: inline-block;
+}
+.tweetsTableCell--list > li:first-child:after {
+  content: ",";
+  margin-right: 4px;
+}
+.tweetsTableCell--list > li:only-child:after {
+  content: "";
+}
