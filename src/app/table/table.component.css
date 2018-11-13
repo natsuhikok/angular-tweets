@@ -2,6 +2,7 @@
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+  margin-bottom: 40px;
 }
 .tweetsTableCell {
   padding: 20px;

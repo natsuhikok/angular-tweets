@@ -1,9 +1,19 @@
-<h4>{{type}} Search</h4>
-<input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
-<app-table [tweets]="currentTweets"></app-table>
-<app-pagination
-  *ngIf="currentPage !== 0"
-  [current]="currentPage"
-  [last]="lastPage"
-  (sendNextPageNumber)="paging($event)"
-></app-pagination>
+<div class="searchBar">
+  <label class="searchBar--label" for="search-box">{{type}} Search</label>
+  <input
+    class="searchBar--input"
+    #searchBox
+    id="search-box"
+    (keyup)="search(searchBox.value)"
+    placeholder="Search by {{type}}"
+  />
+</div>
+<div class="tableContainer">
+  <app-table [tweets]="currentTweets"></app-table>
+  <app-pagination
+    *ngIf="currentPage !== 0"
+    [current]="currentPage"
+    [last]="lastPage"
+    (sendNextPageNumber)="paging($event)"
+  ></app-pagination>
+</div>

@@ -1,0 +1,31 @@
+.tableContainer {
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1080px;
+  box-shadow: 0px 5px 10px 0px rgba(87, 98, 117, 0.04);
+  border-radius: 2px;
+  padding: 24px 24px;
+}
+
+.searchBar {
+  width: 100%;
+  margin: 0 auto 20px auto;
+  max-width: 1080px;
+}
+.searchBar--label {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+.searchBar--input {
+  line-height: 2;
+  padding: 0 10px;
+  font-size: 14px;
+  width: 240px;
+}
+.searchBar--input::placeholder {
+  font-size: 12px;
+  color: #999;
+}
