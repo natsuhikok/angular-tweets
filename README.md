@@ -16,14 +16,18 @@ the contents in tweets data table are below:
 
 The search term for the user search screen should be single user name. The term for the hashtag search screen should be single hashtag. Matching method is both Exact match.
 
-live demo: 
+## Demo
+Live demo: [hikonaz.me/angular-tweets/](http://hikonaz.me/angular-tweets/)
+
+It is required to use [this Chrome add-ons](https://waa.ai/aCw4) to allow CORS for live demo.
+
 
 ## Language
-Angular 5
+`Angular 5`
 
 ## Install
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4. Make sure to install `@angular/cli@1` as Angular CLI was version 1.7 for Angular 5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version `1.7.4`. Make sure to install `@angular/cli@1` as Angular CLI was version `1.7` for `Angular 5`.
 
 ## Development server
 
@@ -32,6 +36,9 @@ Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The 
 ## Build
 
 Run `num run build` to build the project for a production. The build artifacts will be stored in the `dist/` directory.
+
+## Deploy
+Run `num run deploy` to deploy the project into github pages.
 
 ## documentation for Angular 5
 
