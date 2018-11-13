@@ -12,14 +12,13 @@ import { TweetService } from '../tweet.service';
 })
 export class TweetsComponent implements OnInit {
   @Input() type: string;
-  tweets: Tweet[];
-  currentTweets: Tweet[];
-  currentPage: number;
-  lastPage: number;
-  message: string;
-  private searchTerms = new Subject<string>();
-
   constructor(private tweetService: TweetService) {}
+
+  tweets: Tweet[] = [];
+  currentTweets: Tweet[];
+  currentPage: number = 0;
+  lastPage: number = 0;
+  private searchTerms = new Subject<string>();
 
   search(term: string): void {
     this.searchTerms.next(term);

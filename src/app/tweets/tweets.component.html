@@ -9,7 +9,7 @@
   />
   <p class="searchBar--message">{{tweetService.message}}</p>
 </div>
-<div class="tableContainer">
+<div *ngIf="tweets.length !== 0" class="tableContainer">
   <app-table [tweets]="currentTweets"></app-table>
   <app-pagination
     *ngIf="currentPage !== 0"
