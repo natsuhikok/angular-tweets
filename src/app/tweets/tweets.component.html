@@ -7,6 +7,7 @@
     (keyup)="search(searchBox.value)"
     placeholder="Search by {{type}}"
   />
+  <p class="searchBar--message">{{tweetService.message}}</p>
 </div>
 <div class="tableContainer">
   <app-table [tweets]="currentTweets"></app-table>

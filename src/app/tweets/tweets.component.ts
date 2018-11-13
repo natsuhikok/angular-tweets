@@ -16,6 +16,7 @@ export class TweetsComponent implements OnInit {
   currentTweets: Tweet[];
   currentPage: number;
   lastPage: number;
+  message: string;
   private searchTerms = new Subject<string>();
 
   constructor(private tweetService: TweetService) {}
