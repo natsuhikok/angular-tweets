@@ -12,7 +12,7 @@ import { TweetService } from '../tweet.service';
 })
 export class TweetsComponent implements OnInit {
   @Input() type: string;
-  constructor(private tweetService: TweetService) {}
+  constructor(public tweetService: TweetService) {}
 
   tweets: Tweet[] = [];
   currentTweets: Tweet[];
