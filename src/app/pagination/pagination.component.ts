@@ -14,5 +14,4 @@ export class PaginationComponent {
   handleClick(next: number) {
     this.sendNextPageNumber.emit(next);
   }
-  constructor() { }
 }

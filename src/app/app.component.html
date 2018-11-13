@@ -1,7 +1,15 @@
-<h1>Angular Twitter</h1>
-<nav>
-  <a routerLink="/tags">Tags</a>
-  <a routerLink="/users">Users</a>
+<h1 class="headline">Angular Twitter</h1>
+<nav class="navigation">
+  <a
+    class="navigation--item"
+    routerLink="/tags"
+    routerLinkActive="active"
+  >Hashtag search</a>
+  <a
+    class="navigation--item"
+    routerLink="/users"
+    routerLinkActive="active"
+  >User Search</a>
 </nav>
 <main class="container">
   <router-outlet></router-outlet>

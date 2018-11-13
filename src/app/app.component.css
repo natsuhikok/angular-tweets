@@ -3,3 +3,32 @@
   background-color: #FAFAFA;
   padding: 30px 15px;
 }
+.headline {
+  width: 100%;
+  margin: 18px auto;
+  max-width: 1080px;
+  font-size: 20px;
+}
+
+.navigation {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1080px;
+}
+.navigation--item {
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 2px 2px 0 0;
+  text-decoration: none;
+  color: #01BAEF;
+  transition: 0.2s;
+}
+.navigation--item:hover {
+  background-color: #F7F7F7;
+}
+.navigation--item.active,
+.navigation--item.active:hover {
+  background-color: #FAFAFA;
+}
