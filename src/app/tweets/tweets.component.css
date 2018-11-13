@@ -24,6 +24,12 @@
   padding: 0 10px;
   font-size: 14px;
   width: 240px;
+  margin-right: 10px;
+}
+.searchBar--message {
+  display: inline;
+  font-size: 14px;
+  color: #888;
 }
 .searchBar--input::placeholder {
   font-size: 12px;
