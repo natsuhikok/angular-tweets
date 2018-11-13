@@ -4,7 +4,6 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 
 import Tweet from '../tweet';
 import { TweetService } from '../tweet.service';
-import { TWEETS } from '../mock-tweets';
 
 @Component({
   selector: 'app-tweets',
@@ -38,11 +37,10 @@ export class TweetsComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    // this.searchTerms.pipe(
-    //   debounceTime(300),
-    //   distinctUntilChanged(),
-    //   switchMap((term: string) => this.tweetService.searchTweets(term, this.type.toLowerCase())),
-    // ).subscribe(tweets => this.pageInit(tweets));
-    this.pageInit(TWEETS);
+    this.searchTerms.pipe(
+      debounceTime(300),
+      distinctUntilChanged(),
+      switchMap((term: string) => this.tweetService.searchTweets(term, this.type.toLowerCase())),
+    ).subscribe(tweets => this.pageInit(tweets));
   }
 }
